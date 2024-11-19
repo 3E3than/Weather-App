@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './Weather.css'
 import search_icon from '../assets/search.png'
 import cloud_icon from '../assets/cloud.png'
@@ -8,10 +8,11 @@ import rain_icon from '../assets/rain.png'
 import snow_icon from '../assets/snow.png'
 import wind_icon from '../assets/wind.png'
 import clear_icon from '../assets/clear.png'
+import { WeatherContext } from '../WeatherContext'
 
 const Weather = () => {
 
-    const [weatherData, setWeatherData] = useState(false);
+    const {weatherData, setWeatherData} = useContext(WeatherContext);
     const inputRef = useRef();
 
 
@@ -40,10 +41,6 @@ const Weather = () => {
             console.error("error fetching data")
         }
     }
-
-    useEffect(()=>{
-        search("Hsinchu");
-    },[])
 
   return (
     <div className = 'weather'>

@@ -1,11 +1,14 @@
 import React from 'react'
 import Weather from './components/Weather'
+import { WeatherProvider } from './WeatherContext'
 
 const App = () => {
   return (
-    <div className = "app">
-      <Weather/>
-    </div>
+    <WeatherProvider>
+      <div className = "app">
+        <Weather/>
+      </div>
+    </WeatherProvider>
   )
 }
 
