@@ -14,7 +14,8 @@ const Weather = () => {
 
     const {weatherData, setWeatherData} = useContext(WeatherContext);
     const inputRef = useRef();
-
+    const APP_ID = import.meta.env.VITE_APP_ID
+    console.log(APP_ID)
 
     const search = async (city)=>{
         if (city == "") {
@@ -22,7 +23,7 @@ const Weather = () => {
             return;
         }
         try {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APP_ID}`;
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);

@@ -4,11 +4,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Haiku.css'
 
 export const Haiku = () => {
+	const HF_ID = import.meta.env.VITE_HF_ID;
+	console.log(HF_ID);
 	const { weatherData } = useContext(WeatherContext);
 	const [haiku, setHaiku] = useState("No haiku yet!");
 	console.log(weatherData);
 	const getHaiku = async () =>{
-		const client = new HfInference(import.meta.env.VITE_HF_ID);
+		const client = new HfInference(HF_ID);
 		let out = "";
 		try {
 			const stream = client.chatCompletionStream({
