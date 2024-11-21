@@ -1,6 +1,7 @@
 import { HfInference } from "@huggingface/inference";
 import { WeatherContext } from '../WeatherContext';
 import React, { useContext, useEffect, useState } from 'react';
+import { Typewriter } from "react-simple-typewriter";
 import './Haiku.css'
 
 export const Haiku = () => {
@@ -47,7 +48,7 @@ export const Haiku = () => {
 	return (
 		<div className="haiku">
             <h1>Haiku Generator</h1>
-            <p>{haiku}</p>
+            <Typewriter key={haiku} words={[haiku]} loop={1} typeSpeed={50} />
         </div>
 		
   	)
