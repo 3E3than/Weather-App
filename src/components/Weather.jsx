@@ -47,7 +47,7 @@ const Weather = () => {
   return (
     <div className = 'weather'>
         <div className= 'searchbar'>
-            <input ref = {inputRef} type = 'text' placeholder= 'search' />
+            <input ref = {inputRef} type = 'text' placeholder= 'search by city name' />
             <img src = {search_icon} alt='' onClick={()=>search(inputRef.current.value)}/>
         </div>
         <img src = {weatherData.icon} className = 'weathericon'/>

@@ -7,7 +7,7 @@ export const Haiku = () => {
 	const HF_ID = import.meta.env.VITE_HF_ID;
 	console.log(HF_ID);
 	const { weatherData } = useContext(WeatherContext);
-	const [haiku, setHaiku] = useState("No haiku yet!");
+	const [haiku, setHaiku] = useState("Search for a weather by city");
 	console.log(weatherData);
 	const getHaiku = async () =>{
 		const client = new HfInference(HF_ID);
