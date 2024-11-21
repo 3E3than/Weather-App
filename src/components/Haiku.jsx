@@ -8,7 +8,7 @@ export const Haiku = () => {
 	const [haiku, setHaiku] = useState("No haiku yet!");
 	console.log(weatherData);
 	const getHaiku = async () =>{
-		const client = new HfInference("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");
+		const client = new HfInference(import.meta.env.VITE_HF_ID);
 		let out = "";
 		try {
 			const stream = client.chatCompletionStream({
