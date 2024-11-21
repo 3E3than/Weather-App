@@ -5,10 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Geo", sans-serif;
+  overscroll-behavior-y: none;
 }
 
 .app {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
-  background: rgb(40, 83, 184)
+  background: linear-gradient(45deg, #023047, #219ebc);
+}
+
+.appHeader {
+  text-align: center;
+  padding-top: 30px;
+  color:white;
+  font-size: 75px;
 }

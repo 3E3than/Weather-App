@@ -32,7 +32,8 @@ const Weather = () => {
                 windspeed: data.wind.speed, 
                 temperature: Math.floor(data.main.temp),
                 location: data.name,
-                icon: icon
+                icon: icon,
+                weatherdescription: data.weather[0]?.description
             })
         }
         catch(error) {
