@@ -7,7 +7,7 @@ const App = () => {
   return (
     <WeatherProvider>
       <div className = "app">
-        <h1 className='appHeader'>Weather App</h1>
+        <h1 className='appHeader'>Weather Haiku Generator</h1>
         <Weather/>
         <Haiku/>
       </div>
